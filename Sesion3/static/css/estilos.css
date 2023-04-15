@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{box-sizing: border-box;}
+body{
+    font-family: sans-serif, Verdana, Arial;
+    margin: 0;
+}
+.top{
+    background-color: #1d8097;
+    position: fixed;
+    width: 100%;
+}
+.top nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 20px 15px;
+    display: block;
+    float: left;
+}
+.top nav a:hover{    background-color: #155d74;    }
+
+.top nav a.activo{    background-color: #155d74;    }
+
+main{display: flex; justify-content: center;}
+
+.login{
+    width: 35%;
+    margin-top: 100px;
+    /*margin: 100px auto;*/
+    min-width:250px;
+    padding: 20px;
+}
+.user_image{
+    width: 60%; 
+    height: auto;
+    margin: 0 auto; 
+    display: block;
+}
+.titulo{
+    text-align: center;    font-style: italic;
+}
+.etiqueta, .textbox, .btn-enviar, .forgot{
+    display: block;    margin-bottom: 5px;
+}
+.textbox{
+    width: 100%;   padding: 5px;
+}
+.btn-enviar{
+    background-color: #1d8097;
+    color: #fff;
+    padding: 10px;
+    border: none;
+}
+.btn-enviar:hover{
+    background-color: #155d74;  cursor: pointer;
+}
+.forgot{
+    text-align: right;  text-decoration: none;
+}
+footer{
+    background-color: #1d8097;
+    position: fixed;
+    margin: 0px auto;
+    bottom: 0;
+    width:100%;
+    height: 50px;;
+}
+.down{
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    float: left;
+}
+.down p{
+    text-align: center;    color: #fff;
+}

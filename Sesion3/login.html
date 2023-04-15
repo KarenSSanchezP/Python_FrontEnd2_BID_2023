@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <link rel="stylesheet" href="static/css/estilos.css">
+    <style>
+        .login{ border: 1px solid gray; border-radius: 10px;}
+        .titulo{color: red /*!important*/}
+    </style>
+</head>
+<body>
+    <header class="top">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html" class="activo">Contacto</a>
+            <a href="index.html">Acerca de</a>
+        </nav>
+    </header>
+    <main>
+        <div class="login">
+            <img src="static/img/user.png" alt="" class="user_image">
+            <h1 class="titulo" style="color:#ecb807">Login</h1>
+            <form action="procesar.html" method="post">
+                <div>
+                    <label for="user" class="etiqueta">Usuario</label>
+                    <input type="text" name="user" id="user" class="textbox">
+                </div>
+                <div>
+                    <label for="pass" class="etiqueta">Contraseña</label>
+                    <input type="password" name="pass" id="pass" class="textbox">
+                </div>
+                <input type="submit" value="Iniciar" class="btn-enviar">
+                <a href="forgot.html" class="forgot">¿Olvidaste tu contraseña?</a>
+            </form>
+        </div>
+    </main>
+    <footer class="down">
+        <p>&copy; Copyright 2023</p>
+    </footer>
+</body>
+</html>

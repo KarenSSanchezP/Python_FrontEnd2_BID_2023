@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Factorial</title>
+    <script src="static/js/funciones.js"></script>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="txtNumero">Digite un numero</label>
+        <input type="number" name="txtNumero" id="txtNumero">
+        <button id ="btnFactorial" type="button">Factorial con FOR</button>
+        <button id ="btnFactorial2" type="button">Factorial con While</button>
+        <div id="respuesta"></div>
+    </form>
+    <script>
+        boton = document.getElementById('btnFactorial');
+        boton2 = document.getElementById('btnFactorial2');
+        boton.addEventListener('click', function(){
+            mi_numero = Number(document.getElementById('txtNumero').value);
+            document.getElementById('respuesta').innerHTML = factorial(mi_numero);
+        })
+        boton2.addEventListener('click', function(){
+            mi_numero = Number(document.getElementById('txtNumero').value);
+            document.getElementById('respuesta').innerHTML = factorial2(mi_numero);
+        })
+    </script>
+</body>
+</html>

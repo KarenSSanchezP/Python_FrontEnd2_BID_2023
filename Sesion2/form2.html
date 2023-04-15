@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+</head>
+<body>
+    <h1>Registrarse</h1>
+    <fieldset>
+        <legend>Este es mi formulario</legend>
+        <form action="" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="correo">Correo: </label>
+                <input type="email" name="correo" id="correo" placeholder="Digite su correo">
+            </div>
+            <div>
+                <label for="clave">Contraseña: </label>
+                <input type="password" name="clave" id="clave" placeholder="Digite su clave">
+            </div>
+            <div>
+                <label for="confirmar">Confirmar contraseña: </label>
+                <input type="password" name="confirmar" id="confirmar" placeholder="Confirme su contraseña">
+            </div>
+            <div>
+                <label for="foto">Subir fotografia: </label>
+                <input type="file" name="foto" id="foto" accept=".png,.jpg">
+            </div>
+            <div>
+                <label for="genero_m">Genero: </label>
+                <input type="radio" name="genero" id="genero_m" value="M">Masculino
+                <input type="radio" name="genero" id="genero_f" value="F">Femenino
+            </div>
+            <div>
+                <label for="pais">Pais: </label>
+                <select name="pais" id="pais">
+                    <option value="sv">El Salvador</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="uk">Reino Unido</option>
+                </select>
+            </div>
+            <div>
+                <label for="hobby1">Hobby: </label>
+                <input type="checkbox" name="hobby" id="hobby1" value="1">Basketball
+                <input type="checkbox" name="hobby" id="hobby2" value="2">Futbol
+                <input type="checkbox" name="hobby" id="hobby3" value="3">Hiking
+            </div>
+            <div>
+                <label for="direccion">Direccion: </label>
+                <textarea name="direccion" id="direccion" cols="30" rows="5">
+                </textarea>
+            </div>
+            <div>
+                <label for="fecha">Fecha: </label>
+                <input type="date" name="fecha" id="fecha" value="2023-03-11">
+            </div>
+            <div>
+                <label for="calif">Calificacion: </label>
+                <input type="range" name="calif" id="calif" max="5" min="1" value="0" list="valores"
+                oninput="this.nextElementSibling.value=this.value">
+                <input type="text" name="valor_calif" id="valor_calif" size="1" value="1">
+                <datalist id="valores">
+                    <option value="1" label="1"></option>
+                    <option value="2" label="2"></option>
+                    <option value="3" label="3"></option>
+                    <option value="4" label="4"></option>
+                    <option value="5" label="5"></option>
+                </datalist>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+    </fieldset>
+</body>
+</html>

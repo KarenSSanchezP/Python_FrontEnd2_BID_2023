@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa para Edad</title>
+    <script src="static/js/funciones.js"></script>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="edad">Digite su edad</label>
+        <input type="number" name="edad" id="edad">
+        <button  id ="btnEvaluar" type="button">
+            Evaluar
+        </button>
+        <button type="button" onclick="evaluar_edad(document.getElementById('edad').value)">
+            Evaluar desde onclick</button>
+    </form>
+    <script>
+        boton = document.getElementById('btnEvaluar');
+        boton.addEventListener('click', function(){
+            edad = Number(document.getElementById('edad').value);
+            evaluar_edad(edad);
+        })
+    </script>
+</body>
+</html>
