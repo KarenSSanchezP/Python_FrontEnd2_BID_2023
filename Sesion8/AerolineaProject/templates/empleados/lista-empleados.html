@@ -1,0 +1,31 @@
+{% extends 'layout/base.html' %}
+
+{% block titulo %}
+    {{ titulo }}
+{% endblock titulo %}
+
+{% block content %}
+    <h1>{{ titulo }}</h1>
+    <a href="">Nuevo Empleado</a>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Sueldo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for e in lista %}
+                <tr>
+                    <td>{{ e.id }}</td>
+                    <td>{{ e.nombre }}</td>
+                    <td>{{ e.correo }}</td>
+                    <td>{{ e.sueldo }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

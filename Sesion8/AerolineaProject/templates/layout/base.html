@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}{% endblock %} - Aerolinea</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header class="top">
+        <nav>
+            <a href="">Inicio</a>
+            <a href="" class="activo">Contacto</a>
+            <a href="">Acerca de</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <footer class="pie"  style="text-align: center; color: #fff;">
+        <p>&copy; Copyright 2023</p>
+    </footer>
+</body>
+</html>
