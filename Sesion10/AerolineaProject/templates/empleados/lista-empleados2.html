@@ -1,0 +1,52 @@
+{% extends 'layout/base_bootstrap.html' %}
+
+{% block titulo %}
+    {{ titulo }}
+{% endblock titulo %}
+
+{% block content %}
+    <h1>{{ titulo }}</h1>
+    <a href="{% url 'empleados_app:crear-empleado' %}" class="btn btn-primary">Nuevo Empleado</a>
+    <br><br>
+    {% if messages %}
+    
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            
+            {% for message in messages %}
+                <strong>Mensaje: </strong> {{ message }}
+            {% endfor %}
+            
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    {% endif %}
+    
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Sueldo</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for e in lista %}
+                <tr>
+                    <td>{{ e.id }}</td>
+                    <td>{{ e.nombre }}</td>
+                    <td>{{ e.correo }}</td>
+                    <td>{{ e.sueldo }}</td>
+                    <td>
+                        <a href="{% url 'empleados_app:modificar-empleado' e.id %}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </td>
+                    <td>
+                        <a href="{% url 'empleados_app:eliminar-empleado' e.id %}"><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

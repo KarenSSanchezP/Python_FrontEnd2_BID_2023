@@ -1,0 +1,21 @@
+{% extends 'layout/base_bootstrap.html' %}
+
+{% block titulo %}
+    Modificar Empleado
+{% endblock titulo %}
+
+{% load bootstrap5 %}
+
+{% block content %}
+    <h1>Modificar Empleado</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <!-- <table>
+            {{ form.as_table }}
+        </table>> -->
+        <input type="submit" value="Actualizar" class="btn btn-primary">
+    </form>
+{% endblock content %}
+    
+    

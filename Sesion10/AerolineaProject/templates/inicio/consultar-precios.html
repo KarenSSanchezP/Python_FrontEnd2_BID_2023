@@ -1,0 +1,30 @@
+{% extends 'layout/base_bootstrap.html' %}
+
+
+{% block titulo %}
+    Crypto prices
+{% endblock titulo %}
+
+    
+{% block content %}
+    <h1>Crypto prices</h1>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for crypto in precios %}
+                <tr>
+                    <td> {{ crypto.symbol }} </td>
+                    <td> {{ crypto.price }} </td>
+                </tr>
+            {% endfor %}
+                
+        </tbody>
+    </table>
+{% endblock content %}
+    

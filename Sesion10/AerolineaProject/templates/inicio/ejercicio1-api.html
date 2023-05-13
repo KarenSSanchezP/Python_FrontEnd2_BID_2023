@@ -1,0 +1,36 @@
+{% extends 'layout/base_bootstrap.html' %}
+
+
+{% block titulo %}
+    Usuarios
+{% endblock titulo %}
+
+    
+{% block content %}
+    <h1>Usuarios</h1>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>USERNAME</th>
+                <th>EMAIL</th>
+                <th>PHONE</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for user in usuarios %}
+                <tr>
+                    <td> {{ user.id }} </td>
+                    <td> {{ user.name }} </td>
+                    <td> {{ user.username }} </td>
+                    <td> {{ user.email }} </td>
+                    <td> {{ user.phone }} </td>
+                </tr>
+            {% endfor %}
+                
+        </tbody>
+    </table>
+{% endblock content %}
+    
